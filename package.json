@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "name": "deploy-functions-with-the-sdk",
+  "version": "1.0.0",
+  "main": "src/handler.js",
+  "scripts": {
+    "local": "node scripts/local.js"
+  },
+  "author": "Stedi",
+  "license": "Apache-2.0"
+}
