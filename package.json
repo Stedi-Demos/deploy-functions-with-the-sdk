@@ -4,8 +4,19 @@
   "version": "1.0.0",
   "main": "src/handler.js",
   "scripts": {
-    "local": "node scripts/local.js"
+    "local": "node scripts/local.js",
+    "deploy": "node scripts/deploy.js"
   },
   "author": "Stedi",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@stedi/cli": "^0.0.17",
+    "@stedi/sdk-client-functions": "^0.0.19",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.15.11",
+    "jszip": "^3.10.1"
+  },
+  "dependencies": {
+    "axios": "^1.1.2"
+  }
 }
