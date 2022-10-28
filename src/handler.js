@@ -1,11 +1,11 @@
-import {
-  fetchStatusPage,
-  extractUptimes,
-  logUptimes
-} from "./workflow.js";
+import { fetchBlogPage, extractArticles, logArticles } from "./workflow.js";
 
 export async function handler() {
-  const html = await fetchStatusPage(process.env.STATUS_PAGE_URL);
-  const uptimes = extractUptimes(html);
-  logUptimes(uptimes);
+  // The handler calls functions in workflow.js to do the heavy lifting. It’s not necessary to
+  // spread the code over two files, but we do it here for demonstration purposes. The deployment
+  // script will take both files and include them in the package that’s uploaded to Stedi.
+  
+  const html = await fetchBlogPage(process.env.BLOG_URL);
+  const titles = extractArticles(html);
+  logArticles(titles);
 }
