@@ -14,7 +14,7 @@ If you’d like to understand how the deployment script works, the [source code]
 
 ### Setup
 
-1. Copy [deploy.js](deploy.js) to your own project. You can put it in any subdirectory you want, as long as you run the scripts from your project directory.
+1. Copy [deploy.js](scripts/deploy.js) to your own project. You can put it in any subdirectory you want, as long as you run the scripts from your project directory.
 
 2. Adjust the settings at the top of the script to your needs.
 
