@@ -9,7 +9,7 @@ import { FunctionsClient, CreateFunctionCommand, UpdateFunctionCommand, Resource
 
 // The name of the function you want to deploy. Be careful: if the function already exists, it will
 // be overwritten.
-const functionName = "demo-deploy"; 
+let functionName = "demo-deploy";
 
 // How long the function is allowed to run, in seconds. The maximum is 900. If you know your
 // function shouldn’t take more than a few seconds, you may want to set this lower to guard against
@@ -18,12 +18,17 @@ const timeout = 900;
 
 // The name of the file that contains the handler() function. The path should be relative to the
 // project directory.
-const entryPoint = "src/handler.js";
+let entryPoint = "src/handler.js";
 
 
 main();
 
 async function main() {
+  // Allow command-line arguments to override the settings for function name and entry point.
+  functionName = process.argv[2] || functionName;
+  entryPoint = process.argv[3] || entryPoint;
+
+  // Run the deployment.
   await createBuildDirectory();
   installDependencies();
   await bundle();

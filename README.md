@@ -47,11 +47,16 @@ If you’d like to understand how the deployment script works, the [source code]
 
 ### Running the script
 
-Run the script from the project directory using Node.js. For example, if the script is in a
-directory called `scripts`, run:
+Run the script from the project directory using Node.js. For example, if the script is in a directory called `scripts`, run:
 
 ```console
 node scripts/deploy.js
+```
+
+You can override the settings for function name and entry point from the command line.
+
+```console
+node scripts/deploy.js a-different-function src/index.ts
 ```
 
 ## Demo
