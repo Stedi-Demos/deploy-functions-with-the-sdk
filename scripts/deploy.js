@@ -147,9 +147,11 @@ async function deploy(zip) {
   // deploy the environment variables from .env, not the environment variables you have currently
   // set on the command line.
   // You should add .env to your .gitignore file. The environment variables are specific to you and
-  // they might contain secrets, so you don’t want to commit them.
-  // Stedi Functions doesn’t need you to pass your API key as an environment variable. It already
-  // has access to the resources in your account.
+  // they might contain the Stedi API key, so you don’t want to commit them.
+  // Other than the Stedi API key, you shouldn’t store secrets in environment variables. If your
+  // function needs access to passwords, API keys, and the like, store them in Stash and access
+  // Stash from your function. The Stedi API key is the only exception, because you need it to
+  // access other Stedi products, including Stash.
   const environmentVariables = dotenv.config().parsed;
 
   // If the function already exists, we need to update it. If it doesn’t exist, we need to create

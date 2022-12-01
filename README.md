@@ -39,6 +39,8 @@ If you’d like to understand how the deployment script works, the [source code]
 
 6. Create a `.env` file and fill it with the environment variables your function needs.
 
+> Other than the Stedi API key, you shouldn’t store secrets in environment variables. If your function needs access to passwords, API keys, and the like, store them in [Stash](/docs/stash) and access Stash from your function. The Stedi API key is the only exception, because you need it to access other Stedi products, including Stash.
+
 7. Add the following environment variable to `.env` if you want to enable source maps.
 
    ```
