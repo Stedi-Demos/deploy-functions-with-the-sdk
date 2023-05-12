@@ -30,6 +30,11 @@ If you’d like to understand how the deployment script works, the [source code]
    npm install @stedi/sdk-client-functions esbuild jszip dotenv --save-dev
    ```
 
+   If you want to use bucket sdk:
+   ```console
+   npm install @stedi/sdk-client-buckets --save-dev
+   ```
+
 5. Add the following entries to your `.gitignore`.
 
    ```
@@ -141,6 +146,12 @@ npm ci
 ```
 
 The script will create a function called `demo-deploy`. If your account already contains a function with that name, it will be replaced.
+
+Before run script local, set your environment:
+
+```console
+export STEDI_API_KEY=<API KEY>
+```
 
 From the root of this repository, run:
 
