@@ -11,9 +11,10 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@stedi/cli": "^0.0.17",
+    "@stedi/sdk-client-buckets": "^0.2.9",
     "@stedi/sdk-client-functions": "^0.0.19",
     "dotenv": "^16.0.3",
-    "esbuild": "^0.15.11",
+    "esbuild": "^0.15.18",
     "jszip": "^3.10.1"
   },
   "dependencies": {

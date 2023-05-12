@@ -9,7 +9,7 @@ import { FunctionsClient, CreateFunctionCommand, UpdateFunctionCommand, Resource
 
 // The name of the function you want to deploy. Be careful: if the function already exists, it will
 // be overwritten.
-let functionName = "demo-deploy";
+let functionName = "buckets-get-object";
 
 // How long the function is allowed to run, in seconds. The maximum is 900. If you know your
 // function shouldn’t take more than a few seconds, you may want to set this lower to guard against
